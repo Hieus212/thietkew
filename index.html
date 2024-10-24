@@ -29,23 +29,26 @@
             margin-top: 20px;
             font-size: 24px;
             color: red;
-            display: none;
+            display: none; /* Ẩn dòng chữ lúc đầu */
         }
     </style>
 </head>
 <body>
 
-    <div>
+    <div id="container">
         <img id="gift" src="https://github.com/user-attachments/assets/85caa4c5-f044-4dea-a8ab-a15ae501bd38" alt="Hộp quà">
         <div id="message">I love u</div>
     </div>
 
     <script>
+        // Lấy phần tử ảnh và dòng chữ
         const gift = document.getElementById('gift');
         const message = document.getElementById('message');
 
+        // Xử lý sự kiện khi click vào hộp quà
         gift.addEventListener('click', () => {
-            message.style.display = 'block';
+            gift.style.display = 'none'; // Ẩn hộp quà
+            message.style.display = 'block'; // Hiện dòng chữ
         });
     </script>
 
